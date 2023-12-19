@@ -1,0 +1,32 @@
+[
+  {
+  "members": [
+    {"name": "Ajin",
+      "strength": 4,
+      "life": 7,
+      "majestic_roar": "Heey"
+    },
+    {"name": "Tumpo",
+      "strength": 4,
+      "life": 10,
+      "shout": "Ho",
+      "repetition": 2
+    }
+  ]
+  },
+  {
+  "members": [
+    {"name": "Kobo",
+      "strength": 6,
+      "life": 2,
+      "majestic_roar": "Uhm"
+    },
+    {"name": "Rambo",
+      "strength": 5,
+      "life": 1,
+      "shout": "Ho",
+      "repetition": 3
+    }
+  ]
+  }
+]

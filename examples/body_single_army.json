@@ -1,0 +1,17 @@
+[
+  {
+  "members": [
+    {"name": "Kobo",
+      "strength": 6,
+      "life": 2,
+      "majestic_roar": "Uhm"
+    },
+    {"name": "Rambo",
+      "strength": 5,
+      "life": 1,
+      "shout": "Ho",
+      "repetition": 3
+    }
+  ]
+  }
+]
