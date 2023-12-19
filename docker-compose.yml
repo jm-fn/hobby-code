@@ -1,0 +1,33 @@
+services:
+  redis:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile-redis
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_URL=redis://redis:6379
+    container_name: redis
+
+  worker:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile-worker
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile-app
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+      - worker
+    volumes:
+      - /path/to/certs:/certs:ro

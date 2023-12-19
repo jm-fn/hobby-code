@@ -1,0 +1,12 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+ENV REDIS_URL="redis://redis:6379"
+
+COPY ./hobby-code .
+
+CMD celery -A worker.app worker --loglevel=debug
